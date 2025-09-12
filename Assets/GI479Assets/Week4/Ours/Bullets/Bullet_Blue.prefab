@@ -33,8 +33,8 @@ Transform:
   m_GameObject: {fileID: 3744805283688735882}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001, y: 0.001, z: 0.003}
+  m_LocalPosition: {x: 0, y: 0, z: 0.074939}
+  m_LocalScale: {x: 0.001, y: 0.004820247, z: 0.0000024357153}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_doNotOverwriteTemplateMaterialProperties: 0
   m_startPos: {x: 0, y: 0, z: 0}
   m_endPos: {x: 0, y: 0, z: 50}
-  m_lineColor: {r: 0, g: 0, b: 1, a: 1}
+  m_lineColor: {r: 0.99655426, g: 1, b: 0, a: 1}
   m_lineWidth: 50
   m_lightSaberFactor: 0.747
 --- !u!108 &8267726096342754114
@@ -121,7 +121,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 0.011942387, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.96824867, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 1
   m_SpotAngle: 30
