@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1893225052143410184}
   - component: {fileID: 6276119312454826267}
   - component: {fileID: -349174223821146378}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bullet_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bffb2ca3f4088a4e8b973b137e832eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletDamage: 10
+  rb: {fileID: -349174223821146378}
   speed: 20
   autoDestroyTime: 15
   hitParticle: {fileID: 4098902514106950024, guid: 78b20e4b3fb6cf44784a3a33630ed8b0, type: 3}
