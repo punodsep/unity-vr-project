@@ -8624,7 +8624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
   _audioClips:
-  - {fileID: 8300000, guid: f4ac426e4a3652a488e465b7a97d6dfc, type: 3}
+  - {fileID: 8300000, guid: cd53db403a5d70948933ae39f0e50340, type: 3}
   _volume: 0.7
   _volumeRandomization:
     _useRandomRange: 0
@@ -16693,7 +16693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 0}
   _audioClips:
-  - {fileID: 8300000, guid: f613c476382e9d34fb322f5a1d5c3792, type: 3}
+  - {fileID: 8300000, guid: b98fa64120d8d5943835ace5cdb6f36b, type: 3}
   _volume: 0.7
   _volumeRandomization:
     _useRandomRange: 0
