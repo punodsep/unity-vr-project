@@ -11553,15 +11553,15 @@ RectTransform:
   m_GameObject: {fileID: 926806093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.086654, y: 0.086654, z: 0.086654}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 482284809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -127.09903, y: 43.308434}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -127.1, y: 43.308434}
+  m_SizeDelta: {x: 794, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926806095
 MonoBehaviour:
@@ -11583,7 +11583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c08deec9f11163740a5b326038e148a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ae63f9f249f9324fab8a58e18d77b98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11716,6 +11716,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947153821}
   m_CullTransparentMesh: 1
+--- !u!1 &947281799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947281800}
+  m_Layer: 0
+  m_Name: image_png
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &947281800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947281799}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947732515
 GameObject:
   m_ObjectHideFlags: 0
@@ -14220,7 +14251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8050314, g: 0.20505509, b: 0.20505509, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15376,7 +15407,7 @@ RectTransform:
   m_GameObject: {fileID: 1303955829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7830058, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2126224262}
@@ -15385,7 +15416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.40097, y: 46.12954}
+  m_AnchoredPosition: {x: 154.3, y: 46.12954}
   m_SizeDelta: {x: 247, y: 48.299988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303955831
@@ -15694,7 +15725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77.09903, y: -31.691563}
+  m_AnchoredPosition: {x: -52.3, y: -31.691563}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328649462
@@ -15717,7 +15748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: My Heart will go on
+  m_text: HP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15731,10 +15762,10 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 1, g: 0, b: 0, a: 1}
-    topRight: {r: 1, g: 0, b: 0, a: 1}
-    bottomLeft: {r: 0.15862155, g: 1, b: 0, a: 1}
-    bottomRight: {r: 0.15862155, g: 1, b: 0, a: 1}
+    topLeft: {r: 0.48427665, g: 0.30914512, b: 0.30914512, a: 1}
+    topRight: {r: 0.48427665, g: 0.30914512, b: 0.30914512, a: 1}
+    bottomLeft: {r: 0.1509434, g: 0.015663922, b: 0.015663922, a: 1}
+    bottomRight: {r: 0.1509434, g: 0.015663922, b: 0.015663922, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -15750,7 +15781,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -22890,6 +22921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Vegas
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 97f9f2265d385624b9b576e4b143141b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 97f9f2265d385624b9b576e4b143141b, type: 3}
       propertyPath: m_Controller
       value: 
@@ -24172,7 +24207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122, y: -29}
+  m_AnchoredPosition: {x: 299.2, y: -31.69156}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716501859
@@ -26102,7 +26137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.20125782, g: 0.08164231, b: 0.08164231, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -26261,3 +26296,4 @@ SceneRoots:
   - {fileID: 2012129074}
   - {fileID: 956502697}
   - {fileID: 676183625}
+  - {fileID: 947281800}
