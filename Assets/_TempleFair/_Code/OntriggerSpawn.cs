@@ -19,5 +19,6 @@ public class OnTriggerSpawn : MonoBehaviour
             data.objectToSpawn.transform.rotation,
             data.parentTransform
         );
+
     }
 }
