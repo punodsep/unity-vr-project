@@ -1,4 +1,4 @@
-using Oculus.Interaction.HandGrab;
+﻿using Oculus.Interaction.HandGrab;
 using TheDeveloperTrain.SciFiGuns;
 using UnityEngine;
 using UnityEngine.Events;
@@ -18,12 +18,10 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
     [SerializeField]
     private Bullet bullet;
 
-    [Space]
+    [Header("Ammo")]
     [SerializeField]
-    private bool isAutoFireMode = true;
-
-    [SerializeField]
-    private float fireInterval = 0.25f;
+    private int maxAmmo = 10;
+    private int currentAmmo;
 
     [Header("Trigger")]
     [SerializeField]
@@ -49,9 +47,13 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
     public UnityEvent WhenShoot;
 
     private float lastUseTime;
-    private bool wasFired;
     private float dampedUseStrength;
-    private float fireTimer;
+    private bool wasFired;
+
+    private void Start()
+    {
+        currentAmmo = maxAmmo;
+    }
 
     #region IHandGrabUseDelegate
     public void BeginUse()
@@ -65,6 +67,7 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
     {
         var delta = Time.realtimeSinceStartup - lastUseTime;
         lastUseTime = Time.realtimeSinceStartup;
+
         if (strength > 0)
         {
             dampedUseStrength = Mathf.Lerp(dampedUseStrength, strength, triggerSpeed * delta);
@@ -73,27 +76,15 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
         {
             dampedUseStrength = strength;
         }
+
         UpdateTriggerProgress(dampedUseStrength);
         return dampedUseStrength;
-    }
-
-    void Update()
-    {
-        if (!isAutoFireMode) return;
-
-        if (wasFired && fireTimer <= 0)
-        {
-            ShootBullet();
-            fireTimer = fireInterval;
-        }
-        fireTimer -= Time.deltaTime;
     }
 
     public void EndUse()
     {
         Debug.Log($"End use: {gameObject.name}");
     }
-
     #endregion
 
     private void UpdateTriggerProgress(float progress)
@@ -104,14 +95,11 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
         if (moveZAxis)
             UpdateTriggerPosition(progress);
 
+        // ----- ยิงครั้งเดียวเมื่อ progress ถึง threshold -----
         if (progress >= fireThreshold && !wasFired)
         {
             wasFired = true;
-
-            if (!isAutoFireMode)
-            {
-                ShootBullet();
-            }
+            ShootBullet();
         }
         else if (progress <= releaseThreshold)
         {
@@ -130,15 +118,34 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
     private void UpdateTriggerPosition(float progress)
     {
         var value = triggerZPosition * progress;
-        var position = triggerPivot.localPosition;
-        position.z = value;
-        triggerPivot.localPosition = position;
+        var pos = triggerPivot.localPosition;
+        pos.z = value;
+        triggerPivot.localPosition = pos;
     }
 
     private void ShootBullet()
     {
-        Debug.Log($"{gameObject.name} shoot a bullet.");
+        // เช็ค ammo
+        if (currentAmmo <= 0)
+        {
+            Debug.Log("🔴 Out of Ammo!");
+            return;
+        }
+
+        currentAmmo--;
+
+        Debug.Log($"{gameObject.name} shoot! Ammo left: {currentAmmo}");
+
         Instantiate(bullet, bulletSpawnPosition.position, bulletSpawnPosition.rotation);
         WhenShoot?.Invoke();
+    }
+
+    /// <summary>
+    /// Reload bullet
+    /// </summary>
+    public void Reload(int amount)
+    {
+        currentAmmo = Mathf.Min(currentAmmo + amount, maxAmmo);
+        Debug.Log($"Reloaded. Ammo: {currentAmmo}/{maxAmmo}");
     }
 }
