@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -19,5 +20,11 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int scoreAmount)
     {
         currentScore += scoreAmount;
+        Debug.Log(currentScore);
+    }
+
+    public void ResetScore()
+    {
+        currentScore = 0;
     }
 }

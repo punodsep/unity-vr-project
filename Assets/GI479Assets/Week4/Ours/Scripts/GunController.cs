@@ -95,7 +95,6 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
         if (moveZAxis)
             UpdateTriggerPosition(progress);
 
-        // ----- ยิงครั้งเดียวเมื่อ progress ถึง threshold -----
         if (progress >= fireThreshold && !wasFired)
         {
             wasFired = true;
@@ -125,27 +124,23 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
 
     private void ShootBullet()
     {
-        // เช็ค ammo
         if (currentAmmo <= 0)
         {
-            Debug.Log("🔴 Out of Ammo!");
+            Debug.Log("Out of Ammo");
             return;
         }
 
         currentAmmo--;
 
-        Debug.Log($"{gameObject.name} shoot! Ammo left: {currentAmmo}");
+        Debug.Log($"Ammo left: {currentAmmo}");
 
         Instantiate(bullet, bulletSpawnPosition.position, bulletSpawnPosition.rotation);
         WhenShoot?.Invoke();
     }
 
-    /// <summary>
-    /// Reload bullet
-    /// </summary>
-    public void Reload(int amount)
+    public void ReloadFull()
     {
-        currentAmmo = Mathf.Min(currentAmmo + amount, maxAmmo);
-        Debug.Log($"Reloaded. Ammo: {currentAmmo}/{maxAmmo}");
+        currentAmmo = maxAmmo;
+        Debug.Log($"Reload Full: {currentAmmo}/{maxAmmo}");
     }
 }
