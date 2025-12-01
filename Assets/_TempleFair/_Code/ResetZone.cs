@@ -30,10 +30,10 @@ public class ResetZone : MonoBehaviour
             startRotations[i] = obj.rotation;
         }
     }
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         ResetAll();
-    }
+    }*/
     public void ResetAll()
     {
         if (currentScore != null)
