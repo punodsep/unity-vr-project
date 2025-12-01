@@ -20,8 +20,8 @@ public class GunController : MonoBehaviour, IHandGrabUseDelegate
 
     [Header("Ammo")]
     [SerializeField]
-    private int maxAmmo = 10;
-    private int currentAmmo;
+    public int maxAmmo = 10;
+    public int currentAmmo;
 
     [Header("Trigger")]
     [SerializeField]
