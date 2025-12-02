@@ -18,11 +18,4 @@ public class HotSpotQuest : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            imageUI.SetActive(false);
-        }
-    }
 }
